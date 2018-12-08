@@ -8,10 +8,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 测试类
  */
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         ApplicationContext ctx = new ClassPathXmlApplicationContext("animal.xml");
-        Animal dog = ctx.getBean("dog",Animal.class);
-        Animal cat = ctx.getBean("cat",Animal.class);
-        System.out.println(cat);
+        Animal dog1 = ctx.getBean("dog",Animal.class);
+        Animal dog2 = ctx.getBean("dog",Animal.class);
+
+        System.out.println(dog1 == dog2);
+
     }
 }

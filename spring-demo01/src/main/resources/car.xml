@@ -2,5 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="bike" class="com.kevin.spring.demo4.entity.Car"></bean>
+    <bean id="bikeTyre" class="com.kevin.spring.demo4.entity.Tyre" >
+        <constructor-arg name="name" value="自行车轮胎"></constructor-arg>
+    </bean>
+
+    <bean id="bike" class="com.kevin.spring.demo4.entity.Car">
+        <constructor-arg name="name" value="bike"></constructor-arg>
+        <constructor-arg name="tyre" ref="bikeTyre"></constructor-arg>
+    </bean>
 </beans>

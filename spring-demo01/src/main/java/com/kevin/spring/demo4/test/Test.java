@@ -6,12 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("car.xml");
-        Thread.sleep(5000);
-        Car bike = ctx.getBean("bike",Car.class);
-        Car bike1 = ctx.getBean("bike",Car.class);
-        System.out.println(bike == bike1);
+        Car bike = ctx.getBean("bike", Car.class);
         System.out.println(bike);
     }
 }

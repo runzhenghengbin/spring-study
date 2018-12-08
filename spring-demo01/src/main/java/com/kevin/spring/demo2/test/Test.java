@@ -6,10 +6,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("student.xml");
+        Thread.sleep(3000);
         Person kevin = ctx.getBean("kevin", Student.class);
-        Person maomao = ctx.getBean("maomao", Student.class);
-        System.out.println(maomao);
+        System.out.println(kevin);
     }
 }

@@ -7,12 +7,11 @@ public class Car {
 
     private String name;
 
-    public Car() {
-        System.out.println("Car 初始化了");
-    }
+    private Tyre tyre;
 
-    public Car(String name) {
+    public Car(String name, Tyre tyre) {
         this.name = name;
+        this.tyre = tyre;
     }
 
     public String getName() {
@@ -21,5 +20,21 @@ public class Car {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Tyre getTyre() {
+        return tyre;
+    }
+
+    public void setTyre(Tyre tyre) {
+        this.tyre = tyre;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "name='" + name + '\'' +
+                ", tyre=" + tyre +
+                '}';
     }
 }
